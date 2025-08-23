@@ -1,0 +1,243 @@
+/* Base styles and neomorphic variables */
+:root {
+    --background-light: #f0f0f3;
+    --neumorphic-shadow-light: #d8d8db;
+    --neumorphic-shadow-dark: #ffffff;
+    --text-primary: #333;
+    --text-secondary: #666;
+    --link-color: #007bff;
+    --link-hover-color: #0056b3;
+    --icon-color-1: #d9534f;
+    --icon-color-2: #5cb85c;
+    --icon-color-3: #f0ad4e;
+    --icon-color-4: #5bc0de;
+}
+
+body {
+    background-color: var(--background-light);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+}
+
+/* Page container */
+.mkan-page__main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 1rem;
+    max-width: 1400px;
+    margin: auto;
+}
+
+
+.mkan-page__title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4b4b4b;
+    text-shadow: 2px 2px 4px var(--neumorphic-shadow-dark), -2px -2px 4px var(--neumorphic-shadow-light);
+    margin-bottom: 0.5rem;
+}
+
+/* Diagram section with two columns */
+.mkan-page__diagram-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    width: 100%;
+}
+
+.mkan-page__accordion-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.mkan-page__image-wrapper {
+    flex-shrink: 0;
+    max-width: 650px;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 20px;
+    background-color: var(--background-light);
+    box-shadow: 8px 8px 16px var(--neumorphic-shadow-light), -8px -8px 16px var(--neumorphic-shadow-dark);
+}
+
+.mkan-page__diagram-image {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    display: block;
+}
+
+/* Accordion styles */
+.mkan-accordion__container {
+    border-radius: 15px;
+    background-color: var(--background-light);
+    box-shadow: 6px 6px 12px var(--neumorphic-shadow-light), -6px -6px 12px var(--neumorphic-shadow-dark);
+    transition: all 0.3s ease;
+}
+
+.mkan-accordion__button {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.mkan-accordion__button:hover {
+    background-color: #e6e6e9;
+    border-radius: 15px;
+}
+
+.mkan-accordion__title-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+/* Icon colors */
+.mkan-accordion__icon {
+    font-size: 1.8rem;
+    margin-right: 1rem;
+}
+
+.mkan-accordion__container:nth-of-type(1) .mkan-accordion__icon {
+    color: var(--icon-color-1);
+}
+
+.mkan-accordion__container:nth-of-type(2) .mkan-accordion__icon {
+    color: var(--icon-color-2);
+}
+
+.mkan-accordion__container:nth-of-type(3) .mkan-accordion__icon {
+    color: var(--icon-color-3);
+}
+
+.mkan-accordion__container:nth-of-type(4) .mkan-accordion__icon {
+    color: var(--icon-color-4);
+}
+
+.mkan-accordion__title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #555;
+    margin: 0;
+}
+
+.mkan-accordion__toggle-icon {
+    font-size: 1.2rem;
+    color: #999;
+    transition: transform 0.3s ease;
+}
+
+.mkan-accordion__content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 1.5rem;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+}
+
+.mkan-accordion__content--open {
+    max-height: 500px;
+    padding: 0 1.5rem 1.5rem;
+}
+
+.mkan-accordion__text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    border-top: 1px solid var(--neumorphic-shadow-light);
+    padding-top: 1.5rem;
+    margin-top: 0;
+}
+
+/* External Links Section */
+.mkan-page__external-links {
+    width: 100%;
+    text-align: center;
+    margin-top: 3rem;
+    padding: 1.5rem;
+    border-radius: 20px;
+    background-color: var(--background-light);
+    box-shadow: 6px 6px 12px var(--neumorphic-shadow-light), -6px -6px 12px var(--neumorphic-shadow-dark);
+}
+
+.mkan-page__links-title {
+    font-size: 1.8rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.mkan-page__links-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.mkan-page__links-list li {
+    margin-bottom: 0.5rem;
+}
+
+.mkan-page__links-list a {
+    font-size: 1.1rem;
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.mkan-page__links-list a:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+}
+
+/* --- Media Queries for responsiveness --- */
+@media (max-width: 1200px) {
+    .mkan-page__diagram-section {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .mkan-page__title {
+        font-size: 2rem;
+    }
+
+    .mkan-page__image-wrapper {
+        max-width: 100%;
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .mkan-page__title {
+        font-size: 1.5rem;
+    }
+
+    .mkan-page__main-container {
+        padding: 1.5rem 0.5rem;
+    }
+
+    .mkan-accordion__icon {
+        font-size: 1.5rem;
+    }
+
+    .mkan-accordion__title {
+        font-size: 1.1rem;
+    }
+}
