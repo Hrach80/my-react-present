@@ -142,3 +142,42 @@
         gap: 2rem;
     }
 }
+/* Media Queries for various mobile devices */
+
+/* Small devices (portrait phones, 320px and up) */
+@media (max-width: 480px) {
+    .footer__main-container {
+        padding: 2rem 1rem;
+    }
+
+    .footer__content {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .footer__title {
+        font-size: 1.1rem;
+    }
+
+    .footer__text,
+    .footer__signature {
+        font-size: 0.8rem;
+    }
+
+    .social-icon {
+        font-size: 1.3rem;
+    }
+}
+
+/* Medium devices (landscape phones, 481px to 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+    .footer__content {
+        gap: 1.5rem;
+        justify-content: center;
+    }
+
+    .footer__section {
+        min-width: 150px;
+        max-width: 250px;
+    }
+}

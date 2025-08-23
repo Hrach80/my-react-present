@@ -33,7 +33,7 @@ const Footer = () => {
 
             <div className="footer__signature">
                 <p>
-                    Ստեղծված է <FaHeart className="signature-icon" /> սիրով <a href="tel:+37493395221" target="_blank" rel="noopener noreferrer">Վաղարշակյան Վարուժան</a>
+                    Ստեղծված <FaHeart className="signature-icon" /> սիրով <a href="tel:+37493395221" target="_blank" rel="noopener noreferrer">Վաղարշակյան Վարուժան</a>
                 </p>
             </div>
         </footer>

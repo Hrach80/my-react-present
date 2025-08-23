@@ -189,10 +189,22 @@ body {
     text-decoration: underline;
 }
 
+/* Media Queries for tablets and mobile devices */
 @media (max-width: 900px) {
     .hivand-page__content-section {
         flex-direction: column;
         align-items: center;
+    }
+
+    .hivand-page__buttons-container {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .hivand-page__video-container {
+        min-width: unset;
+        width: 90%;
+        margin-top: 2rem;
     }
 
     .hivand-page__video {
@@ -200,16 +212,57 @@ body {
     }
 }
 
+/* Media Queries for medium-sized phones */
 @media (max-width: 600px) {
     .hivand-page__title {
-        font-size: 2rem;
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+    .hivand-page__buttons-container {
+        width: 90%;
+        gap: 1rem;
+        animation: none;
+        /* Disabling slide-in animation for smaller screens */
+        left: 0;
+    }
+
+    .hivand-page__button {
+        left: 0;
+        animation: none;
+        box-shadow: 4px 4px 8px var(--neumorphic-shadow-light), -4px -4px 8px var(--neumorphic-shadow-dark);
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .hivand-page__video {
+        height: 300px;
+    }
+
+    .hivand-page__wikipedia-link {
+        font-size: 1rem;
+    }
+}
+
+/* Media Queries for small mobile devices */
+@media (max-width: 480px) {
+    .hivand-page__main-container {
+        padding: 5px 0.5rem;
+    }
+
+    .hivand-page__title {
+        font-size: 1rem;
     }
 
     .hivand-page__buttons-container {
         width: 100%;
     }
 
+    .hivand-page__button {
+        font-size: 0.85rem;
+    }
+
     .hivand-page__video {
-        height: 300px;
+        height: 250px;
     }
 }
